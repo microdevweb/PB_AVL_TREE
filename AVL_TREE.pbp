@@ -25,7 +25,7 @@
   </section>
   <section name="targets">
     <target name="Cible par défaut" enabled="1" default="1">
-      <inputfile value=""/>
+      <inputfile value="main.pb"/>
       <outputfile value=""/>
       <options xpskin="1" debug="1"/>
     </target>
