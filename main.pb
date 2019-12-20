@@ -36,7 +36,7 @@ Global myTree.AVL_TREE::tree = AVL_TREE::new_tree(@compare())
 OpenConsole("AVL Tree")
 EnableGraphicalConsole(1)
 PrintN("Please wait we load above 450.000 records, that  can be take some time")
-PrintN("For must performs please disable the debuger :)")
+PrintN("For maximize  performs please disable the debugger :)")
 load_data()
 ask()
 ;**********************************************************************************************************************
