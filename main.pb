@@ -36,6 +36,7 @@ Global myTree.AVL_TREE::tree = AVL_TREE::new_tree(@compare())
 OpenConsole("AVL Tree")
 EnableGraphicalConsole(1)
 PrintN("Please wait we load above 450.000 records, that  can be take some time")
+PrintN("For must performs please disable the debuger :)")
 load_data()
 ask()
 ;**********************************************************************************************************************
@@ -64,7 +65,7 @@ Procedure load_data()
     i + 1
   Wend  
   te = (ElapsedMilliseconds() - t) / 1000
-  txt = Str(i-1)+" data are loaded in "+StrF(te,2)+" seconds"
+  txt = Str(i-1)+" data are loaded in "+StrF(te,2)+" seconds (press any keys for next step)"
   PrintN(txt)
   Input()
 EndProcedure
@@ -72,7 +73,7 @@ EndProcedure
 Procedure ask()
   Protected choice.s
   Protected.people *p,*f
-  Protected t,te
+  Protected t.f,te.f
   Repeat
     ClearConsole()
     Print("Enter a id of we look for (betwenn 100008 and 2345813) or empty for exit : ")
@@ -84,7 +85,7 @@ Procedure ask()
       t = ElapsedMilliseconds() ; for calculate the  elapsed time
       *f = myTree\search(*p)
       te = ElapsedMilliseconds() - t
-      PrintN("Request finished in "+Str(te)+" ms")
+      PrintN("Request finished in "+StrF(te,2)+" ms")
       If *f
         Print("First name : "+*f\fname + " Surname : "+*f\sname + " id : "+Str(*f\id))
       Else
@@ -104,6 +105,6 @@ EndProcedure
 
 ; IDE Options = PureBasic 5.71 LTS (Windows - x64)
 ; CursorPosition = 38
-; FirstLine = 21
+; FirstLine = 33
 ; Folding = -
 ; EnableXP
